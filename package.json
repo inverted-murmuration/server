@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.12.4",
+    "gulp-jsdoc": "^0.1.4",
     "jasmine-node": "^1.14.5",
     "restbus": "^1.1.0"
   },

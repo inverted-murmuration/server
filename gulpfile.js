@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var notify = require('gulp-notify');
+var jsdoc = require("gulp-jsdoc");
 
 gulp.task('test', function() {
   gulp.src(['./**/*.js', '!node_modules/**/*.js'])
@@ -14,4 +15,9 @@ gulp.task('test', function() {
 
 gulp.task('default', function() {
 
+});
+
+gulp.task('jsdoc', function() {
+  gulp.src(["server.js", "README.md"])
+    .pipe(jsdoc('./docs'));
 });
