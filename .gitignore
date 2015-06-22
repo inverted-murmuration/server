@@ -1,2 +1,5 @@
 node_modules
 docs
+
+# webstorm stuff
+.idea/workspace.xml
