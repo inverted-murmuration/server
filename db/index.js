@@ -1,8 +1,13 @@
 var pg = require('pg');
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('smkhalsa', 'smkhalsa', null, {
-  host: 'localhost',
+var host = process.env.host || 'localhost';
+var database = process.env.database || 'smkhalsa';
+var user = process.env.user || 'smkhalsa';
+var password = process.env.password || null;
+
+var sequelize = new Sequelize(database, user, password, {
+  host: host,
   port: 5432,
   dialect: 'postgres',
   pool: {
