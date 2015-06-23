@@ -9,10 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^0.8.3",
+    "bluebird": "^2.9.30",
+    "body-parser": "^1.13.1",
     "express": "^4.12.4",
     "gulp-jsdoc": "^0.1.4",
     "jasmine-node": "^1.14.5",
-    "restbus": "^1.1.0"
+    "morgan": "^1.6.0",
+    "pg": "^4.4.0",
+    "pg-hstore": "^2.3.2",
+    "restbus": "^1.1.0",
+    "sequelize": "^3.3.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
