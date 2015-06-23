@@ -2,7 +2,6 @@ var db = require('../db');
 var bcrypt = require('bcrypt');
 var bluebird = require('bluebird');
 
-
 module.exports = {
   users: {
     get: function (req, res) {

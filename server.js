@@ -1,4 +1,3 @@
-
 /**
  * File that begins the server.
  * @file
@@ -6,7 +5,6 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
-var db = require('./db');
 var controllers = require('./controllers');
 var port = process.env.PORT || '3000';
 
