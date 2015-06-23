@@ -1,22 +1,7 @@
 var pg = require('pg');
 var Sequelize = require('sequelize');
 
-//var host = process.env.db_host || 'localhost';
-//var database = process.env.db_database || 'smkhalsa';
-//var user = process.env.db_user || 'smkhalsa';
-//var password = process.env.db_password || null;
-//
-//var sequelize = new Sequelize(database, user, password, {
-//  host: host,
-//  port: 5432,
-//  dialect: 'postgres',
-//  pool: {
-//    max: 5,
-//    min: 0,
-//    idle: 10000
-//  }
-//});
-
+// heroku automatically creates the config variable 'DATABASE_URL' when you add a postgres add-on to a server
 var sequelize = new Sequelize(process.env.DATABASE_URL);
 
 var Users = sequelize.define('users', {
