@@ -2,6 +2,7 @@ var db = require('../db');
 var bcrypt = require('bcrypt');
 var bluebird = require('bluebird');
 
+
 module.exports = {
   users: {
     get: function (req, res) {
@@ -13,11 +14,19 @@ module.exports = {
           });
     },
     post: function (req, res) {
-      var user = {email: req.body.email};
-      db.Users.create(user)
-          .then(function (results, err) {
-            res.sendStatus(201);
-          });
+      bcrypt.genSalt(10, function(err, salt) {
+        var email = req.body.email;
+        var password = req.body.password;
+        // Create hashed password
+        bcrypt.hash(password, salt, function(err, hash) {
+          // Store hashed password in database
+          var user = {email: email, password: hash};
+          db.Users.create(user)
+              .then(function (results, err) {
+                res.sendStatus(201);
+              });
+        });
+      });
     }
   }
 };
