@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/inverted-murmuration/project.svg?branch=master)](https://travis-ci.org/inverted-murmuration/project)
+[![Build Status](https://travis-ci.org/inverted-murmuration/server.svg?branch=master)](https://travis-ci.org/inverted-murmuration/server)
