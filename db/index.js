@@ -1,10 +1,10 @@
 var pg = require('pg');
 var Sequelize = require('sequelize');
 
-var host = process.env.host || 'localhost';
-var database = process.env.database || 'smkhalsa';
-var user = process.env.user || 'smkhalsa';
-var password = process.env.password || null;
+var host = process.env.db_host || 'localhost';
+var database = process.env.db_database || 'smkhalsa';
+var user = process.env.db_user || 'smkhalsa';
+var password = process.env.db_password || null;
 
 var sequelize = new Sequelize(database, user, password, {
   host: host,
